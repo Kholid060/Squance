@@ -1,0 +1,65 @@
+.circular-progress-ui {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &:not(.spinner) {
+    min-height: 60px;
+    min-width: 60px;
+  }
+  &.spinner {
+    svg {
+      .secondary {
+        display: none;
+      }
+      animation: rotate 2s linear infinite;
+      .path {
+        animation: dash 1.5s ease-in-out infinite;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    .path {
+      transition: stroke-dashoffset 0.35s;
+    }
+    circle {
+      stroke-linecap: round;
+      fill: transparent;
+    }
+    text {
+      dominant-baseline: middle;
+      text-anchor: middle;
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}

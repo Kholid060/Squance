@@ -1,0 +1,83 @@
+.input-ui {
+  display: inline-block;
+  @apply rounded-lg;
+  .disabled {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+  &__container {
+    transition-timing-function: ease;
+    transition-property: background-color, border, border-color;
+    transition-duration: 200ms;
+    @apply px-3 rounded-lg;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    &.error {
+      @apply border-danger;
+    }
+  }
+  .textarea {
+    @apply p-3;
+    min-height: 26px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .prefix-icon {
+    @apply mr-2;
+  }
+  .suffix-icon {
+    @apply ml-2;
+  }
+  .mdi-icon {
+    @apply text-light;
+  }
+  input {
+    background-color: transparent;
+    line-height: 2.5rem;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  &.block {
+    width: 100%;
+    display: block;
+    textarea {
+      width: 100%;
+    }
+  }
+  &.background {
+    @apply bg-light;
+  }
+  &.large input {
+    @apply px-1;
+    line-height: 3rem;
+  }
+  &.default {
+    .input-ui__container{
+      @apply bg-input;
+    }
+  }
+  &.outline {
+    @apply border-2;
+    background-color: transparent !important;
+  }
+  &:focus-within,
+  &:hover {
+    .input-ui__container{
+      @apply bg-input-dark;
+    }
+  }
+}
+
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 300ms ease;
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}

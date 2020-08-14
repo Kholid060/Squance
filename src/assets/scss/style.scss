@@ -1,0 +1,73 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  @apply text-default bg-lighter;
+}
+
+* {
+  border-color: var(--border);
+}
+
+.toasted {
+  padding: 20px !important;
+  font-weight: 500 !important;
+}
+
+.vue-popover-theme {
+  z-index: 99;
+}
+
+.ct-series-a .ct-area {
+  fill: #1e6ee4 !important;
+}
+
+.ct-series-a .ct-line,
+.ct-series-a .ct-point {
+  stroke: #1e6ee4 !important;
+}
+
+.ct-label {
+  @apply text-light #{!important}
+}
+
+.mdi-icon{
+  transition: transform .2s ease;
+}
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.group:hover .group-hover\:visible {
+  visibility: visible;
+}
+.vue-popover-theme:focus{
+  outline: none;
+  div, .popover-inner{
+    outline: none;
+  }
+}
+
+.scroll::-webkit-scrollbar {
+  width: 7px;
+  height: 9px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  @apply bg-input-dark;
+  border-radius: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: transparent;
+}

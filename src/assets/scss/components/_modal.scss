@@ -1,0 +1,23 @@
+.modal-container {
+  z-index: 999;
+}
+
+.modal-ui {
+  .overlay, .modal-content {
+    transition: all 250ms ease;
+  }
+  .modal-content {
+    transform: translateY(50px);
+  }
+  &.show {
+    .overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-content {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

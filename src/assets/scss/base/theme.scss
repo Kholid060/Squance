@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+@mixin extractColors($colors) {
+  @each $name, $color in $colors {
+    --#{$name}: #{$color};
+  }
+}
+
+:root {
+  @include extractColors($baseColors);
+  @include extractColors($lightTheme);
+}

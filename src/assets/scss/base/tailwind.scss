@@ -1,0 +1,9 @@
+/*! purgecss start ignore */
+@import  "tailwindcss/base";
+@import  "tailwindcss/components";
+@import "./theme.scss";
+@import "../style.scss";
+@import '../components/_tooltip.scss';
+/*! purgecss end ignore */
+
+@import  "tailwindcss/utilities";

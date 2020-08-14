@@ -1,0 +1,36 @@
+$padding: 5;
+
+.card-ui {
+  @apply rounded-lg bg-card;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+  transition-property: background-color, color, box-shadow, transform, border;
+  min-width: 200px;
+  overflow: hidden;
+  &.disabled {
+    pointer-events: none;
+  }
+  &__image {
+    @apply rounded-tr-lg rounded-tl-lg;
+    transition: transform 0.2s ease;
+    .img-ui {
+      width: 100%;
+    }
+  }
+  &.is-hover:hover {
+    @apply shadow-xl;
+    transform: translateY(-2px);
+  }
+  .card-ui__header {
+    @apply px-#{$padding} pt-#{$padding};
+  }
+  .card-ui__content {
+    @apply p-#{$padding};
+    &.no-padding {
+      padding: 0 !important;
+    }
+  }
+  .card-ui__footer {
+    @apply bg-lighter px-#{$padding} py-4;
+  }
+}

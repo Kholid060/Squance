@@ -1,0 +1,10 @@
+$rotates: 90, 180, 270;
+
+.mdi-icon {
+  display: inline-block;
+  @each $rotate in $rotates {
+    &.icon-rotate-#{$rotate} {
+      transform: rotate(#{$rotate}deg);
+    }
+  }
+}

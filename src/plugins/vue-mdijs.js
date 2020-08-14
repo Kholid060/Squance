@@ -1,0 +1,46 @@
+import VueMdijs from 'vue-mdijs';
+import {
+  mdiCodeJson,
+  mdiXml,
+  mdiPlay,
+  mdiChevronDown,
+  mdiArrowDown,
+  mdiPlus,
+  mdiDelete,
+  mdiClose,
+  mdiCog,
+  mdiPause,
+  mdiStop,
+  mdiRestart,
+  mdiAlertCircle,
+  mdiExportVariant,
+  mdiPencil,
+  mdiMenu,
+  mdiMagnify,
+  mdiSort,
+  mdiCalendar,
+} from '@mdi/js';
+
+VueMdijs.add({
+  mdiCodeJson,
+  mdiXml,
+  mdiPlay,
+  mdiChevronDown,
+  mdiArrowDown,
+  mdiPlus,
+  mdiDelete,
+  mdiClose,
+  mdiCog,
+  mdiPause,
+  mdiStop,
+  mdiRestart,
+  mdiAlertCircle,
+  mdiExportVariant,
+  mdiPencil,
+  mdiMenu,
+  mdiMagnify,
+  mdiSort,
+  mdiCalendar,
+});
+
+export default VueMdijs;

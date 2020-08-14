@@ -1,0 +1,7 @@
+.img-ui {
+  background-size: cover;
+  background-repeat: no-repeat;
+  &.is-contain {
+    background-size: contain;
+  }
+}

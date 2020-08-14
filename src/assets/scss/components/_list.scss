@@ -1,0 +1,51 @@
+.list-ui {
+  transition: background-color 0.2s ease;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  &.disabled {
+    pointer-events: none;
+  }
+  &.active-group{
+    @apply pl-4 text-default;
+    &:before{
+      @apply rounded bg-primary;
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 35px;
+      left: -5px;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+  }
+  &.router-link-exact-active, &.active{
+    @apply text-primary;
+    background-color: rgba(0, 82, 204, 0.2);
+  }
+  .prefix{
+    @apply mr-3;
+    svg {
+      vertical-align: top;
+    }
+  }
+  .dense{
+    @apply p-2 #{!important};
+  }
+  &.hover:not(.router-link-exact-active):not(.active):hover{
+    @apply bg-input;
+  }
+}
+
+.list-ui-group {
+  .list-ui:not(.activator) {
+    @apply mb-2 pl-4;
+  }
+}
+.dark-theme {
+  .list-ui {
+    &.router-link-exact-active, &.active {
+      @apply text-white;
+    }
+  }
+}

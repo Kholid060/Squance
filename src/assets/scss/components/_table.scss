@@ -1,0 +1,26 @@
+.table-ui {
+  width: 100%;
+  thead {
+    tr {
+      @apply text-light border-b;
+      th {
+        font-weight: normal !important;
+        @apply px-3 py-4;
+      }
+    }
+  }
+  tbody {
+    tr {
+      @apply border-b;
+      transition-duration: 100ms;
+      transition-timing-function: ease;
+      transition-property: border-radius background-color;
+      &:hover {
+        @apply bg-lighter;
+      }
+      td {
+        @apply p-4;
+      }
+    }
+  }
+}

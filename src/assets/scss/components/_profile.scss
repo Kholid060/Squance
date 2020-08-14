@@ -1,0 +1,51 @@
+.profile-container {
+  position: relative;
+  overflow: hidden;
+  .profile-content {
+    @apply flex flex-col justify-center;
+  }
+  .profile-wrapper {
+    nav {
+      @apply flex flex-row items-center;
+      .nav-item {
+        cursor: pointer;
+        transition: color 0.2s ease;
+        &.is-active {
+          @apply text-default;
+        }
+        &:hover {
+          @apply text-default;
+        }
+      }
+    }
+    .skills-container {
+      .skills-wrapper {
+        @apply mt-3;
+        .skill-card {
+          @apply rounded-lg py-6 text-center;
+          width: 110px;
+          transition-property: background-color;
+          transition-duration: 200ms;
+          transition-timing-function: ease;
+          cursor: default;
+          &:first-child {
+            margin-left: 0;
+          }
+          img {
+            height: 40px;
+            width: 40px;
+            margin: 0 auto;
+            filter: grayscale(1);
+            transition: filter 0.3s ease;
+          }
+          &:hover {
+            @apply bg-default;
+            img {
+              filter: grayscale(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
