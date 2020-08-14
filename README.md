@@ -1,4 +1,6 @@
-# keyframes2
+# Squance - CSS Keyframes Editor
+
+<img src="/public/image.png" />
 
 ## Project setup
 ```
